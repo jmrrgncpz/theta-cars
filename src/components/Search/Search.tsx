@@ -1,11 +1,19 @@
+import { ChangeEventHandler, useRef, useState } from "react";
+import { Car } from "../../../server/types";
+import Button from "../Primitives/Button";
 import Input from "../Primitives/Input";
 import Select from "../Primitives/Select";
 
-type Props = {
-  onChange: (value: { filter: string; searchTerm: string }) => void;
+export type SearchValue = {
+  filter: keyof Car;
+  searchTerm: string;
 };
 
-const FILTERS: { value: string; label: string }[] = [
+type Props = {
+  onChange: (value: SearchValue) => void;
+};
+
+const FILTERS: { value: keyof Car; label: string }[] = [
   {
     label: "VIN",
     value: "vin",
@@ -25,14 +33,41 @@ const FILTERS: { value: string; label: string }[] = [
 ];
 
 const Search = ({ onChange }: Props) => {
+  const [filter, setFilter] = useState<keyof Car>("vin");
+  const [searchTerm, setSearchTerm] = useState<string>("");
+
+  const handleFilterChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
+    setFilter(event.currentTarget.value as keyof Car);
+  };
+
+  const handleSearchTermChange: ChangeEventHandler<HTMLInputElement> = (
+    event
+  ) => {
+    setSearchTerm(event.currentTarget.value);
+  };
+
+  const handleSearchButtonPress = () => {
+    onChange({
+      filter,
+      searchTerm,
+    });
+  };
+
   return (
     <div>
-      <Select className="rounded-r-none h-full">
+      <Select className="rounded-r-none h-full" onChange={handleFilterChange}>
         {FILTERS.map((f) => (
           <option value={f.value}>{f.label}</option>
         ))}
       </Select>
-      <Input className="rounded-l-none h-full" placeholder="Search" />
+      <Input
+        onChange={handleSearchTermChange}
+        className="rounded-l-none h-full flex-1"
+        placeholder="Looking for something?"
+      />
+      <Button className="ml-4" onClick={handleSearchButtonPress}>
+        Search
+      </Button>
     </div>
   );
 };

@@ -11,12 +11,22 @@ type Props = Car & {
 
 const CarListItem = ({ _container, img, make, model, price, vin }: Props) => {
   const { className: containerClassName, ...containerProps } = _container ?? {};
+
+  const renderPrice = () => {
+    const formatter = new Intl.NumberFormat("en-us", {
+      style: "currency",
+      currency: "USD",
+    });
+
+    return formatter.format(price);
+  };
+
   return (
     <Card
-      className={["flex", containerClassName].join(" ")}
+      className={["flex gap-4", containerClassName].join(" ")}
       {...containerProps}
     >
-      <figure className="w-48 h-48">
+      <figure className="w-48 h-48 flex justify-center items-center">
         <img src={img} className="w-full" />
       </figure>
       <div className="flex flex-col flex-1 py-2 pr-4">
@@ -24,7 +34,7 @@ const CarListItem = ({ _container, img, make, model, price, vin }: Props) => {
         <span className="text-2xl">
           {model} | {make}
         </span>
-        <span className="text-lg font-bold">{price}</span>
+        <span className="text-lg font-bold">{renderPrice()}</span>
       </div>
     </Card>
   );

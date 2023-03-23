@@ -5,4 +5,5 @@ export type Car = {
   model: string;
   vin: string;
   img: string;
+  year: number;
 };
