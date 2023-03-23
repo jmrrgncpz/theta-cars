@@ -10,7 +10,7 @@ const Select = ({
   return (
     <select
       placeholder="Select"
-      className={["rounded-md drop-shadow-md px-4 py-2", className].join(" ")}
+      className={["rounded-md drop-shadow-sm px-4 py-2", className].join(" ")}
       {...props}
     />
   );

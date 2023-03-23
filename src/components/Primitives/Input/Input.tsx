@@ -10,7 +10,7 @@ const Input = ({
   return (
     <input
       className={[
-        "px-4 py-2 text-gray-100 rounded-md drop-shadow placeholder-gray-300 font-normal",
+        "px-4 py-2 text-gray-100 rounded-md drop-shadow-sm placeholder-gray-300 font-normal",
         className,
       ].join(" ")}
       {...props}
