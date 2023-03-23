@@ -1,0 +1,103 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "vin": "AAAAAAAAAA1111111",
+      "year": 2022,
+      "make": "Mazda",
+      "model": "Mazda2",
+      "price": 20000,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/3/31/Mazda2_%28DJ%29_Homura_1X7A0345.jpg"
+    },
+    {
+      "id": 2,
+      "vin": "AAAAAAAAAA2222222",
+      "year": 2023,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "price": 35000,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
+    },
+    {
+      "id": 3,
+      "vin": "AAAAAAAAAA3333333",
+      "year": 2023,
+      "make": "Mazda",
+      "model": "Mazda2",
+      "price": 25000,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/3/31/Mazda2_%28DJ%29_Homura_1X7A0345.jpg"
+    },
+    {
+      "id": 4,
+      "vin": "BBBBBBBBBB1111111",
+      "year": 2022,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "price": 30000,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/8/88/2019_Mazda3_SE-L_2.0_Front.jpg"
+    },
+    {
+      "id": 5,
+      "vin": "CCCCCCCCCC1111111",
+      "year": 2022,
+      "make": "Mazda",
+      "model": "MX-5",
+      "price": 45000,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/5/5c/2018_Mazda_MX-5_RF_Sport_2.0_Front.jpg"
+    },
+    {
+      "id": 6,
+      "vin": "AAAAAAAAAA4444444",
+      "year": 2023,
+      "make": "Mazda",
+      "model": "MX-5",
+      "price": 55000,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/5/5c/2018_Mazda_MX-5_RF_Sport_2.0_Front.jpg"
+    },
+    {
+      "id": 7,
+      "vin": "AAAAAAAAAA5555555",
+      "year": 2023,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "price": 40000,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/e/ea/2018_Mazda6_Sport_NAV%2B_Diesel_2.2_Front.jpg"
+    },
+    {
+      "id": 8,
+      "vin": "DDDDDDDDDD1111111",
+      "year": 2022,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "price": 350000,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/e/ea/2018_Mazda6_Sport_NAV%2B_Diesel_2.2_Front.jpg"
+    },
+    {
+      "id": 9,
+      "vin": "EEEEEEEEEE1111111",
+      "year": 2022,
+      "make": "Mazda",
+      "model": "BT-50",
+      "price": 30000,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/6/68/2022_Mazda_BT-50_3.0d_Turbo_4x4_%28Chile%29_front_view.jpg"
+    },
+    {
+      "id": 10,
+      "vin": "FFFFFFFFFF1111111",
+      "year": 2023,
+      "make": "Mazda",
+      "model": "BT-50",
+      "price": 34000,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/6/68/2022_Mazda_BT-50_3.0d_Turbo_4x4_%28Chile%29_front_view.jpg"
+    },
+    {
+      "id": 11,
+      "vin": "AAAAAAAAAA6666666",
+      "year": 2020,
+      "make": "Mazda",
+      "model": "BT-50",
+      "price": 25000,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/6/68/2022_Mazda_BT-50_3.0d_Turbo_4x4_%28Chile%29_front_view.jpg"
+    }
+  ]
+}
