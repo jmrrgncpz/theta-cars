@@ -42,7 +42,7 @@ export default function Home() {
     }
 
     return carList.map((carData) => (
-      <Link href={`/details/${carData.id}`}>
+      <Link key={carData.vin} href={`/details/${carData.id}`}>
         <CarListItem key={carData.vin} {...carData} />
       </Link>
     ));

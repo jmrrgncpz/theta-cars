@@ -33,6 +33,7 @@ const PaginationBar = ({
 
         return (
           <span
+            key={i}
             onClick={handlePageClick(displayPage)}
             className={[
               "px-3 py-1 rounded-full cursor-pointer hover:bg-gray-200",

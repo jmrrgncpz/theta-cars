@@ -57,7 +57,7 @@ const Search = ({ onChange }: Props) => {
     <div>
       <Select className="rounded-r-none h-full" onChange={handleFilterChange}>
         {FILTERS.map((f) => (
-          <option value={f.value}>{f.label}</option>
+          <option key={f.value} value={f.value}>{f.label}</option>
         ))}
       </Select>
       <Input
