@@ -23,8 +23,8 @@ const PaginationBar = ({ page, totalItemCount, onChange }: Props) => {
           <span
             onClick={handlePageClick(displayPage)}
             className={[
-              "px-3 py-1 rounded-full",
-              isCurrentPage ? "border border-gray-700" : "",
+              "px-3 py-1 rounded-full cursor-pointer hover:bg-gray-200",
+              isCurrentPage ? "border border-gray-700 hover:bg-white" : "",
             ].join(" ")}
           >
             {displayPage}
