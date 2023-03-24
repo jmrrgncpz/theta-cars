@@ -1,3 +1,4 @@
+import { formatPrice } from "@/utils/number";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 import { Car } from "../../../server/types";
 import Card from "../Card";
@@ -9,17 +10,16 @@ type Props = Car & {
   >;
 };
 
-const CarListItem = ({ _container, img, make, model, price, vin }: Props) => {
+const CarListItem = ({
+  _container,
+  img,
+  make,
+  model,
+  price,
+  vin,
+  year,
+}: Props) => {
   const { className: containerClassName, ...containerProps } = _container ?? {};
-
-  const renderPrice = () => {
-    const formatter = new Intl.NumberFormat("en-us", {
-      style: "currency",
-      currency: "USD",
-    });
-
-    return formatter.format(price);
-  };
 
   return (
     <Card
@@ -29,12 +29,12 @@ const CarListItem = ({ _container, img, make, model, price, vin }: Props) => {
       <figure className="w-48 h-48 flex justify-center items-center">
         <img src={img} className="w-full" />
       </figure>
-      <div className="flex flex-col flex-1 py-2 pr-4">
+      <div className="flex flex-col flex-1 py-2 pr-4 justify-center">
         <span className="text-sm">{vin}</span>
         <span className="text-2xl">
-          {model} | {make}
+          {year} {model} | {make}
         </span>
-        <span className="text-lg font-bold">{renderPrice()}</span>
+        <span className="text-lg font-bold">{formatPrice(price)}</span>
       </div>
     </Card>
   );
