@@ -63,7 +63,7 @@ export default Details;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const data = await (
-    await fetch("http://localhost:3001/cars/" + context.query.id)
+    await fetch(`${process.env.SERVER_HOST}/cars/` + context.query.id)
   ).json();
 
   return {

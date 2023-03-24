@@ -9,7 +9,7 @@ const useCarsQuery = (page: number) => {
   useEffect(() => {
     setIsLoading(true);
 
-    fetch(`http://localhost:3001/cars?_page=${page}&_limit=5`)
+    fetch(`${process.env.NEXT_PUBLIC_SERVER_HOST}/cars?_page=${page}&_limit=5`)
       .then((res) => {
         const xTotalCount = res.headers.get("X-Total-Count") ?? undefined;
         if (xTotalCount) {
