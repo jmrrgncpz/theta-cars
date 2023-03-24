@@ -6,7 +6,6 @@
 
 ## Install
 1. run `yarn`
-2. install json-server with `npm i -g json-server`
 
 ## Run
 1. run `yarn dev`
