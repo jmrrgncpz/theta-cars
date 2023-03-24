@@ -1,7 +1,7 @@
+import { Car } from "@/types";
 import { formatPrice } from "@/utils/number";
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import Head from "next/head";
-import { Car } from "../../../server/types";
 
 const Details = ({ data }: { data: Car }) => {
   const { img, vin, model, make, year, price } = data;

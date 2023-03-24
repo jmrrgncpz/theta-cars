@@ -1,5 +1,5 @@
 import { ChangeEventHandler, useRef, useState } from "react";
-import { Car } from "../../../server/types";
+import { Car } from "../../types";
 import Button from "../Primitives/Button";
 import Input from "../Primitives/Input";
 import Select from "../Primitives/Select";

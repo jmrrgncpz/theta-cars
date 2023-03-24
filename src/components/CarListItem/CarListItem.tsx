@@ -1,6 +1,6 @@
 import { formatPrice } from "@/utils/number";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
-import { Car } from "../../../server/types";
+import { Car } from "../../types";
 import Card from "../Card";
 
 type Props = Car & {

@@ -9,7 +9,7 @@ import { useCarsQuery } from "@/hooks";
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
-import { Car } from "../../server/types";
+import { Car } from "../types";
 
 export default function Home() {
   const [searchResult, setSearchResult] = useState<Car[]>();

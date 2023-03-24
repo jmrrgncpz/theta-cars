@@ -1,5 +1,5 @@
+import { Car } from "@/types";
 import { useEffect, useState } from "react";
-import { Car } from "../../server/types";
 
 const useCarsQuery = (page: number) => {
   const [cars, setCars] = useState<Car[]>();
