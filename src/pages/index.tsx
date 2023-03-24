@@ -59,6 +59,9 @@ export default function Home() {
 
     return (
       <PaginationBar
+        _container={{
+          className: "px-4",
+        }}
         onChange={handlePageChange}
         totalItemCount={totalItemCount ?? 0}
         page={page}
@@ -78,10 +81,9 @@ export default function Home() {
           <div className="py-2 px-4">
             <Search onChange={handleSearchValueChange} />
           </div>
+          {renderTools()}
 
           <div className="gap-4 px-4 flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3">
-            {renderTools()}
-
             {isLoading && (
               <span className="text-gray-400 font-semibold">Loading...</span>
             )}
