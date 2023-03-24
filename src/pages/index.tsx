@@ -16,8 +16,10 @@ export default function Home() {
       return [];
     }
 
-    const searchResult = items.filter(
-      (c) => c[value.filter as keyof Car] == value.searchTerm
+    const searchResult = items.filter((c) =>
+      new RegExp(value.searchTerm, "gi").test(
+        c[value.filter as keyof Car].toString()
+      )
     );
 
     setSearchResult(searchResult);
