@@ -35,7 +35,7 @@ test("should filter by VIN and show Mazda3", async () => {
   render(<Home />);
 
   await userEvent.selectOptions(await screen.findByRole("combobox"), "VIN");
-  await userEvent.type(await screen.findByRole("textbox"), "BBBBBBBBBB1111111");
+  await userEvent.type(await screen.findByRole("searchbox"), "BBBBBBBBBB1111111");
   await userEvent.click(await screen.findByRole("button"));
 
   expect(await screen.findByText("BBBBBBBBBB1111111")).toBeVisible();
