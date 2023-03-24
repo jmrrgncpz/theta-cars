@@ -1,4 +1,10 @@
-import { Search, SearchValue, CarListItem, PaginationBar } from "@/components";
+import {
+  Search,
+  SearchValue,
+  CarListItem,
+  PaginationBar,
+  Button,
+} from "@/components";
 import { useCarsQuery } from "@/hooks";
 import Head from "next/head";
 import Link from "next/link";
@@ -42,6 +48,24 @@ export default function Home() {
     ));
   };
 
+  const handleClearClick = () => {
+    setSearchResult(undefined);
+  };
+
+  const renderTools = () => {
+    if (Boolean(searchResult)) {
+      return <Button onClick={handleClearClick}>Clear filter</Button>;
+    }
+
+    return (
+      <PaginationBar
+        onChange={handlePageChange}
+        totalItemCount={totalItemCount ?? 0}
+        page={page}
+      />
+    );
+  };
+
   return (
     <>
       <Head>
@@ -55,13 +79,9 @@ export default function Home() {
             <Search onChange={handleSearchValueChange} />
           </div>
 
-          <PaginationBar
-            onChange={handlePageChange}
-            totalItemCount={totalItemCount ?? 0}
-            page={page}
-          />
-
           <div className="gap-4 px-4 flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3">
+            {renderTools()}
+
             {isLoading && (
               <span className="text-gray-400 font-semibold">Loading...</span>
             )}
